@@ -16,41 +16,29 @@ The Traffic Generator supports the following features:
 
 -   Duplicate the current run - The actor can duplicate itself to run on multiple instances. Basically it will parallelize the work and multiply the power of it.
 
-
 ## Bugs, fixes, updates and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/traffic-generator/issues).
 
 ## Setup & Usage
 
-You can see how this actor works these videos:
+You can see how this actor works this video:
 
-### Using Search
-
-[![Apify - XXXXX Scraper - Using Search](https://img.youtube.com/vi/7rpRBlIE--o/0.jpg)](https://www.youtube.com/watch?v=7rpRBlIE--o)
-
-You can check the output of this example [here](https://api.apify.com/v2/datasets/AVTdGvcS2iOjDgAaV/items?clean=true&format=json).
-
-### Using Start URLs
-
-[![Apify - XXXXX Scraper - Using Start URLs](https://img.youtube.com/vi/ProePJ_1pwA/0.jpg)](https://www.youtube.com/watch?v=ProePJ_1pwA)
-
-You can check the output of this example [here](https://api.apify.com/v2/datasets/yiZ9wm15WMTdmdH8L/items?clean=true&format=json).
+[![Apify - Traffic Generator](https://i.imgur.com/Bg1xrKJ.png)](https://www.youtube.com/watch?v=HI5kOd9RV3c)
 
 ## Input Parameters
 
 The input of this scraper should be JSON containing the list of pages that should be visited. Required fields are:
 
-| Field                | Type    | Description                                                                                                                                                                                                    |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mode               | String  | (required) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.                                                                                                                                                       |
-| enableCrawling       | Boolean | (optional) This option will enable the crawling capabilities of the actor. If you enable this option the actor will scrape all the links that if finds on the website. |
-| startUrls            | Array   | (required) List of URLs that you want to create requests on.                                                                                                                 |
-| endPage              | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.                                                          |
-| endAfterSeconds             | Integer | (optional) You can limit the time on the actor. Basically if you want to kill the actor after a certain number of seconds, you should enable and fill this field.                                                                                                |
-| duplicateActor             | Integer | (optional) This option will duplicate the current run with this number. Please keep in mind that the load on the website will be multiplied by this number.                                                                                                |
-| proxy                | Object  | Proxy configuration                                                                                                                                                                                            |
-
+| Field           | Type    | Description                                                                                                                                                            |
+| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mode            | String  | (required) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.                                                                                                       |
+| enableCrawling  | Boolean | (optional) This option will enable the crawling capabilities of the actor. If you enable this option the actor will scrape all the links that if finds on the website. |
+| startUrls       | Array   | (required) List of URLs that you want to create requests on.                                                                                                           |
+| endPage         | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.                  |
+| endAfterSeconds | Integer | (optional) You can limit the time on the actor. Basically if you want to kill the actor after a certain number of seconds, you should enable and fill this field.      |
+| duplicateActor  | Integer | (optional) This option will duplicate the current run with this number. Please keep in mind that the load on the website will be multiplied by this number.            |
+| proxy           | Object  | Proxy configuration                                                                                                                                                    |
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -64,7 +52,6 @@ Please keep in mind that actor duplication is a very strong option to generate t
 
 The actor runs forever unless you abort it. Thats why you should always set the option of `endAfterSeconds`. If you want to generate a traffic constantly then keep this option as empty.
 
-
 ### Compute Unit Consumption
 
 The actor optimized to run blazing fast and scrape many as listings as possible. Therefore, it forefronts all requests. If actor doesn't block very often it'll scrape 100 pages in 2 minutes with ~0.03-0.05 compute units.
@@ -73,15 +60,12 @@ The actor optimized to run blazing fast and scrape many as listings as possible.
 
 ```json
 {
-  "mode":"PAGEVIEW",
-  "startUrls":[
-    "https://apify.com/"
-  ],
-  "enableCrawling":true,
-  "duplicateActor": 2,
-  "waitForPageview":true
+    "mode": "PAGEVIEW",
+    "startUrls": ["https://apify.com/"],
+    "enableCrawling": true,
+    "duplicateActor": 2,
+    "waitForPageview": true
 }
-
 ```
 
 ## During the Run
