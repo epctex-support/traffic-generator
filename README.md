@@ -18,13 +18,7 @@ The Traffic Generator supports the following features:
 
 ## Bugs, fixes, updates and changelog
 
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/traffic-generator/issues).
-
-## Setup & Usage
-
-You can see how this actor works this video:
-
-[![Apify - Traffic Generator](https://i.imgur.com/Bg1xrKJ.png)](https://www.youtube.com/watch?v=HI5kOd9RV3c)
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/traffic-generator/issues).
 
 ## Input Parameters
 
