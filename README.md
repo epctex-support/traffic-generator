@@ -22,21 +22,23 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages that should be visited. Possible fields are:
 
-| Field           | Type    | Description                                                                                                                                                            |
-| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mode            | String  | (required) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.                                                                                                       |
-| enableCrawling  | Boolean | (optional) This option will enable the crawling capabilities of the actor. If you enable this option the actor will scrape all the links that if finds on the website. |
-| startUrls       | Array   | (required) List of URLs that you want to create requests on.                                                                                                           |
-| endPage         | Integer | (optional) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.                  |
-| endAfterSeconds | Integer | (optional) You can limit the time on the actor. Basically if you want to kill the actor after a certain number of seconds, you should enable and fill this field.      |
-| duplicateActor  | Integer | (optional) This option will duplicate the current run with this number. Please keep in mind that the load on the website will be multiplied by this number.            |
-| proxy           | Object  | Proxy configuration                                                                                                                                                    |
+- `startUrls`: (Required) (Array) List of URLs that you want to create requests on.
+
+- `mode`: (Required) (String) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.
+
+- `endAfterSeconds`: (Required) (Number) You can limit the time on the actor. Basically if you want to kill the actor after a certain number of seconds, you should enable and fill this field.
+
+- `duplicateActor`: (Required) (Number) This option will duplicate the current run with this number. Please keep in mind that the load on the website will be multiplied by this number.
+
+- `enableCrawling`: (Optional) (Boolean) This option will enable the crawling capabilities of the actor. If you enable this option the actor will scrape all the links that if finds on the website.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
-##### Tip
+### Tip
 
 `PAGEVIEW` mode triggers Puppeteer instance and waits for Pageview responses. If you want to generate traffic on the target, that option should be selected.
 
