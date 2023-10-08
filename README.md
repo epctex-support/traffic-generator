@@ -1,5 +1,3 @@
-[https://apify.com/epctex/traffic-generator](https://apify.com/epctex/traffic-generator?fpr=yhdrb)
-
 # Actor - Traffic Generator
 
 ## Traffic Generator
@@ -9,6 +7,8 @@ This actor helps you to generate traffic to your website. If you want some pagev
 The Traffic Generator supports the following features:
 
 -   Generate Pageviews - The actor can generate pageviews for Google on any of the target websites.
+
+-   Generate Youtube View Counts - Generate view counts immediately on Youtube!
 
 -   Generate Stress and Load - The actor can generate stress on the target websites. It is good for testing purposes.
 
@@ -29,6 +29,8 @@ The input of this scraper should be JSON containing the list of pages that shoul
 - `startUrls`: (Required) (Array) List of URLs that you want to create requests on.
 
 - `mode`: (Required) (String) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.
+
+- `enableYoutube`: (Optional) (Boolean) Let the actor play the Youtube videos. The mode has to be `PAGEVIEW`. Please set `waitOnPage` attribute for the best experience.
 
 - `waitOnPage`: (Optional) (Number) (Only on Pageview Mode) How much time that the actor will stay on each of the pages. If you want to specify the number of seconds that the actor will spend on every page, you should enable and fill this field.
 
@@ -63,6 +65,7 @@ The actor is optimized to run blazing fast and scrape many listings as possible.
     "mode": "PAGEVIEW",
     "startUrls": ["https://apify.com/"],
     "enableCrawling": true,
+    "enableYoutube": false,
     "duplicateActor": 2,
     "waitForPageview": true
 }
