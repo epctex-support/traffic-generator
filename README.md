@@ -30,7 +30,7 @@ The input of this scraper should be JSON containing the list of pages that shoul
 
 - `mode`: (Required) (String) Mode of the actor. It can be PAGEVIEW or STRESS_TEST.
 
-- `enableYoutube`: (Optional) (Boolean) Let the actor play the Youtube videos. The mode has to be `PAGEVIEW`. Please set `waitOnPage` attribute for the best experience.
+- `enableYoutube`: (Optional) (Boolean) (Experimental Feature) Let the actor play the Youtube videos. The mode has to be `PAGEVIEW`. Please set `waitOnPage` attribute for the best experience.
 
 - `waitOnPage`: (Optional) (Number) (Only on Pageview Mode) How much time that the actor will stay on each of the pages. If you want to specify the number of seconds that the actor will spend on every page, you should enable and fill this field.
 
