@@ -66,6 +66,7 @@ Example JSON:
 
     This option is created for stress-load tests.
 - `proxy`: (Required) (Proxy Object)
+
     Proxy configuration.
 
 This solution requires the use of Proxy servers, either your proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
