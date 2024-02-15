@@ -65,9 +65,10 @@ Example JSON:
     Remember great power comes with great responsibility. If you want to double the actor number, make sure to do it under control. If you fill this field by 3, then the actor will clone itself and run by 4 runs in total. However, you should always keep in mind that there is a limitation that you have on Apify (memory or CUs) which you can find on your dashboard.
 
     This option is created for stress-load tests.
-- `proxy`: (Required) (Proxy Object) Proxy configuration.
+- `proxy`: (Required) (Proxy Object)
+    Proxy configuration.
 
-    This solution requires the use of Proxy servers, either your proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
+This solution requires the use of Proxy servers, either your proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
 
 ### Example Input Scenario 1: How to Generate YouTube Video View?
